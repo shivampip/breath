@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Amatic SC', cursive;
+    font-family: "Amatic SC", cursive;
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ body{
     background-color: rgb(71, 255, 163);
 }
 
-.mainContainer{
+.mainContainer {
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -23,7 +23,7 @@ body{
     margin-top: -50px;
 }
 
-.animContainer{
+.animContainer {
     width: 370px;
     height: 370px;
     background-color: rgba(255, 255, 255, 0.52);
@@ -34,7 +34,7 @@ body{
     justify-content: center;
 }
 
-.textContainer{
+.textContainer {
     width: 400px;
     height: fit-content;
     /* flex: 1; */
@@ -47,10 +47,11 @@ body{
     animation-timing-function:  linear;
     animation-iteration-count:  infinite; 
     animation-direction:  normal; */
-    position: relative; 
+    position: relative;
 }
 
-.in, .out{
+.in,
+.out {
     width: 100%;
     text-align: center;
     position: absolute;
@@ -59,28 +60,28 @@ body{
     right: 0;
 }
 
-.in{
-animation-name: breathIn;
-    animation-duration: 10s;
-    animation-timing-function:  linear;
-    animation-iteration-count:  infinite; 
-    animation-direction:  normal;
+.in {
+    animation-name: breathIn;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
 }
 
-.out{
-animation-name: breathOut;
-    animation-duration: 10s;
-    animation-timing-function:  linear;
-    animation-iteration-count:  infinite; 
-    animation-direction:  normal;
+.out {
+    animation-name: breathOut;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
 }
 
-.circle{
+.circle {
     width: 50%;
     height: 50%;
     background-color: rgb(255, 255, 255);
     animation: resize, rotate;
-    animation-duration: 5s, 2s; 
+    animation-duration: 4s, 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse, normal;
     animation-timing-function: ease-in-out;
@@ -88,7 +89,7 @@ animation-name: breathOut;
     border-radius: 100%;
 }
 
-@keyframes resize{
+@keyframes resize {
     from {
         width: 10%;
         height: 10%;
@@ -99,7 +100,7 @@ animation-name: breathOut;
     }
 }
 
-@keyframes rotate{
+@keyframes rotate {
     from {
         transform: rotate(0deg);
     }
@@ -108,18 +109,38 @@ animation-name: breathOut;
     }
 }
 
-@keyframes breathOut{
-    0%   {opacity: 0.0;}
-    15%  {opacity: 1.0;}
-    35%  {opacity: 1.0;}
-    50% {opacity: 0.0; }
-    100% {opacity: 0.0;}
+@keyframes breathOut {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-@keyframes breathIn{
-    0%   {opacity: 0.0;}
-    50%  {opacity: 0.0;}
-    65%  {opacity: 1.0;}
-    85% {opacity: 1.0; }
-    100% {opacity: 0.0;}
+@keyframes breathIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
